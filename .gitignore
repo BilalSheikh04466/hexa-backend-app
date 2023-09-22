@@ -1,0 +1,7 @@
+node_modules/
+dist/
+
+.env
+
+# make a config.json from the template and ask for credentials
+config/config.json
