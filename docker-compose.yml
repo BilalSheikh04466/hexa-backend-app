@@ -15,16 +15,13 @@ services:
   db:
     container_name: postgres
     image: postgres
-    environment:zzzzzzz
+    environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_DB=${DB_NAME}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
     ports:
       - "${DB_PORT}:5432"  # Assuming 5432 is the default PostgreSQL port
-    volumes:
-      - data:/data/db
-volumes:
-  data: {}
+
 
 
 
