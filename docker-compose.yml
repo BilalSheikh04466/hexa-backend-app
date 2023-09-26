@@ -15,7 +15,7 @@ services:
   db:
     container_name: postgres
     image: postgres
-    environment:
+    environment:zzzzzzz
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_DB=${DB_NAME}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
