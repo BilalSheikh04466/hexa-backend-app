@@ -7,7 +7,7 @@ services:
     environment:
       - PORT=${PORT}
     ports:
-      - "${PORT}:${PORT}"
+      - "5432:5432"
     depends_on:
       - db
     volumes:
