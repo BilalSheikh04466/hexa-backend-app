@@ -5,20 +5,21 @@ services:
     restart: always
     build: .
     ports:
-      - ${PORT}:${PORT}
+      - "${PORT}:${PORT}"
     depends_on:
       - db
     volumes:
-    - .:/usr/src/app
+      - .:/usr/src/app
   db:
     container_name: postgres
     image: postgres
     ports:
-      - 5433:${DB_PORT}
+      - "${DB_PORT}:5432"  # Use 5432 as the default PostgreSQL port
     volumes:
       - data:/data/db
     environment:
       - POSTGRES_PASSWORD=${DB_PASSWORD}
       - POSTGRES_DB=${DB_NAME}
 volumes:
- data: {}
+  data: {}
+
